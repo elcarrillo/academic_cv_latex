@@ -85,5 +85,3 @@ Feel free to reach out if you have any questions or suggestions for improvement!
 ## License
 
 This CV template is open-source. You are free to use, modify, and share it for personal or professional purposes.
-
-#### Date Created: March 4, 2022, Last Modified: October 16, 2024
