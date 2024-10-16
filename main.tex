@@ -1,4 +1,4 @@
-%% Date Created: March 4, 2022, 
+%% Date Created: March 4, 2022
 %% Last Modified: October 16, 2024
 %% Available on GitHub at: https://github.com/elcarrillo/academic_cv_latex
 
@@ -15,12 +15,10 @@
 \usepackage{tabularx}             % Responsive tables
 \usepackage{hanging}              % Hanging indents for citations
 \usepackage{helvet}               % Sans-serif font (Helvetica)
-% \usepackage{lastpage}           % allows for referencing last page, used in footer
 \usepackage{datetime}             % Custom date/time
 
 % redefine \today to show only month and year
 \renewcommand{\today}{\monthname[\the\month] \the\year}
-
 
 \renewcommand{\familydefault}{\sfdefault} % Set default font to sans-serif
 \definecolor{NavyBlue}{RGB}{0,0,128}      % custom colors
@@ -35,7 +33,6 @@
 
 \titlespacing*{\subsubsection}{0pt}{0ex}{0ex}
 
-
 % line spacing
 \setstretch{1.2}
 
@@ -45,14 +42,13 @@
 
 %% Define footer for all pages 
 \renewcommand{\headrulewidth}{0pt}  % Remove the line at the top
-\fancyfoot[L]{Edgar L. Carrillo}    % Left-aligned name
-\fancyfoot[C]{\thepage}             % Center-aligned page number
-\fancyfoot[R]{\today}               % Right-aligned date
+\fancyfoot[L]{[Your Name]}    % Left-aligned name
+\fancyfoot[C]{\thepage}       % Center-aligned page number
+\fancyfoot[R]{\today}         % Right-aligned date
 
 % Custom footer for the first page
 \fancypagestyle{firstpagefooter}{
     \fancyhf{}  % Clear header and footer on the first page
-    % \fancyfoot[L]{Custom text for the first page}  % Custom left footer text
     \fancyfoot[C]{\thepage}  % Custom center footer text
     \fancyfoot[R]{\today}  % Custom right footer text
 }
@@ -83,224 +79,89 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
-
-
-\title{\LARGE\bfseries Edgar L. Carrillo}
+\title{\LARGE\bfseries [Your Name]}
 \author{}
 \date{}
 
 \maketitle \vspace{-2.0cm} %vspace -# gets rid of space from empty \author and \date
 
 \begin{center}
-    PhD Student $\cdot$ Department of Earth Science $\cdot$ University of Oregon \\
+    [Your Title] $\cdot$ [Your Department] $\cdot$ [Your Institution] \\
     
-    \faEnvelope\ \href{mailto:elcar@uoregon.edu}{elcar@uoregon.edu} $\cdot$ 
-    \faGlobe\ \href{https://elcarrillo.github.io/portfolio/}{elcarrillo.github.io} $\cdot$ 
-    \faGithub\ \href{https://github.com/elcarrillo}{github.com/elcarrillo} %\cdot$ 
-    % \faTwitter\ \href{https://x.com/EdgarLCarrillo}{@EdgarLCarrillo}
+    \faEnvelope\ \href{mailto:YourEmail@example.com}{YourEmail@example.com} $\cdot$ 
+    \faGlobe\ \href{https://your-website.com}{your-website.com} $\cdot$ 
+    \faGithub\ \href{https://github.com/your-github}{github.com/your-github} % Optional social icons
 \end{center}
 
 %% use custom footer on the first page
 \thispagestyle{firstpagefooter}
 
-
 \section*{Education}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-2024 - Present & \textbf{University of Oregon}, Eugene, OR \\
-               & Ph.D. in Earth Science, concentration in Volcano Physics \\
-               & Thesis: \textit{Dynamics of Volcanic Flows} \\
-               & Advisor: Leif Karlstrom \\
-\\
-2021 - 2023    & \textbf{Fisk University}, Nashville, TN \\
-               & M.S. in Physics, concentration in Volcano Physics \\
-               & Thesis: \textit{Dynamics of Water-Rich Volcanic Plumes} \\
-               & Advisor: Kristen Fauria, Vanderbilt University \\
-\\
-2016 - 2019    & \textbf{California State University}, San Bernardino, CA \\
-               & B.S. in Physics, concentration in Applied Physics \\
-               & Dean's List 2018 \\
+[Year Start] - [Year End] & \textbf{Institution Name}, Location \\
+               & Degree, Field of Study \\
+               & Thesis: \textit{Thesis Title} \\
+               & Advisor: [Advisor Name] \\
 \end{tabularx}
-
 
 \section*{Publications}
 
-\subsubsection*{In Review} %% using subsubsection heading here since its more subtle heading 
-\hangindent=1.5em \hangafter=1 %% hangindent enviromnment gives citation style formatting
-\textbf{Carrillo, E.L.}, Fauria, K.E., Mittal, T., Mastin, L.G., (2024). Effects of External Water on Explosive Eruption Plume Height.
-%%% When using multiple line items with \hangitem in the same section, use \noindent to reset indentation for every new item
-
-\subsubsection*{In Prep}
-% \noindent
+\subsubsection*{In Review} 
 \hangindent=1.5em \hangafter=1
-Ruefer, A.C., Kelly, L.J., Guilherme, G.A.R., \textbf{Carrillo, E.L.}, Hickernell, S., Ward, S., Winslow, H., Ruprecht, P., (2024). One small step in the crust, one giant leap for magma: Insights into magma differentiation from basalt to rhyolite at Cordón Caulle derived from rhyolite-MELTS simulations.
+\textbf{Your Name}, Co-authors, (Year). Paper Title. Journal Name.
 
+\subsubsection*{In Preparation}
+\hangindent=1.5em \hangafter=1
+\textbf{Your Name}, Co-authors, (Year). Paper Title. Journal Name. 
 
 \section*{Invited Talks}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
-2024 & \textbf{Science by the Slice, a STEM Seminar Series}, ``Boom! The Physics of Volcanic Eruptions.'' Lane Community College, Eugene, OR. \\
-2022 & \textbf{Bridge Research Celebration Day}, ``External Water Influence in Explosive Eruption Plumes.'' Vanderbilt University, Nashville, TN. \\
-2022 & \textbf{Fisk Research Symposium}, ``Dynamics of Shallow Submarine Eruptions'' Fisk University, Nashville, TN.
+Year & \textbf{Talk Title}, Conference/Organization Name \\
 \end{tabularx}
 
 \section*{Conference Abstracts}
-
-    \textbf{Carrillo, E.}, Fauria K.E., Mittal, T., Mastin, L.G. (2024, October). Effects of External Water on Explosive 
-    \\ \indent Eruption Plume Height. SACNAS NDiSTEM 2024, Phoenix, AZ.\\
-     Fauria K.E., \textbf{Carrillo, E.}, Mittal, T., Mastin, L.G., Jutzeler M. (2024, August). Plume Heights in Water-Rich 
-     \\ \indent Explosive Eruptions. Cascades24, Bend, OR.\\
-     \textbf{Carrillo, E.}, Fauria K.E., Mittal, T. (2023, December). External Water Effects on Explosive Eruption Plume
-     \\ \indent Height. AGU Fall Meeting 2023, San Francisco, CA.
-
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
+Year & \textbf{Your Name}, Co-authors, Conference Title. Conference, Location.
+\end{tabularx}
 
 \section*{Honors and Awards}
-    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
-    2024 & \textbf{College of Arts and Sciences Fellowship}, University of Oregon \\
-    2024 & \textbf{IGEN Academic Travel Grant}, National Science Foundation \\
-    2024 & \textbf{Summer School on Mathematics of Geophysical Flows Travel Grant}, Max Planck Institute for Mathematics in the Sciences \\
-    2024 & \textbf{Earth Sciences Department Recruitment Award}, University of Oregon \\
-    2023 & \textbf{College of Arts \& Sciences Fellowship}, Vanderbilt University \\
-    2023 & \textbf{Geometry and Analysis of Fluid Flows Workshop Travel Grant}, Vanderbilt University \\
-    2022 & \textbf{Graduate Student Support Grant}, American Physical Society \\
-    2021 & \textbf{Fisk-Vanderbilt Masters-to-PhD Bridge Fellowship}, Fisk University \\
-    2019 & \textbf{Math Alliance Predoctoral Scholar}, Purdue University
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
+Year & \textbf{Award Title}, Awarding Organization.
 \end{tabularx}
 
-
-\section*{Research Interests:} %% using list in wrapped line for compactness
-    Submarine Volcanism, Oceanography, Pyroclastic Density Currents, Conduit Dynamics, Magma Bodies, Igneous Petrology, Fluid Mechanics, Mathematical Modeling
+\section*{Research Interests}
+[Your research interests in list form]
 
 \section*{Research Experience}
-    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-        2024 - Present & \textbf{Research Assistant}, University of Oregon, Eugene, OR \\
-                       & Investigated flow localization in fissure systems. \\
-                       & Used numerical models to analyze the dynamics of conduits. \\
-        \\
-        2021 - 2024    & \textbf{Research Assistant}, Vanderbilt University, Nashville, TN \\
-                       & Investigated the impact of external water and mass eruption rate on plume height. \\
-                       & Assisted in geochemical and thermal modeling using Rhyolite-MELTS. \\
-        \\
-        2019 (Summer)  & \textbf{Research Experience for Undergraduates}, Oregon State University, Corvallis, OR \\
-                       & Participated in NSF and NSA-funded summer research on the reliability assessment of the Power Grid using probability mass functions. \\
-                       & Developed algorithms in R to simulate and analyze data.
-    \end{tabularx}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
+Year Start - Year End & \textbf{Role Title}, Organization, Location \\
+                      & Description of your responsibilities and research projects.
+\end{tabularx}
 
 \section*{Professional Experience}
-    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-        2020 - 2021 & \textbf{Software QA (contract)}, Waymo, Mountain View, CA \\
-                    & Expanded scripts, reports, and dashboards to enhance feature-level performance. \\
-                    & Simulated autonomous vehicle behavior for assistance systems and vehicle dynamics analysis. \\
-                    & Mentored new employees and beta-tested major toolsets, suggesting enhancements. \\
-        \\
-        2016        & \textbf{Intern/Financial Analyst}, California Institute of Technology, Pasadena, CA \\
-                    & Organized and classified data for financial analysis. \\
-                    & Developed automated reporting systems to streamline key metric processing. \\
-                    & Created financial models to assist in decision-making.
-    \end{tabularx}
-
-
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
+Year Start - Year End & \textbf{Role Title}, Organization, Location \\
+                      & Description of your professional roles.
+\end{tabularx}
 
 \section*{Field Experience}
-
-    \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
-        2024 & \textbf{Instructor}, Tennessee, USA (2 days) \\
-             & \textit{Richland Creek:} Taught students how to assess a stream site (water quality and flood risk). \\
-             & \textit{Fort Negley:} Observed sedimentary rocks, interpreted geological processes, and searched for outcrop fossils. \\\\
-        
-        2023 & \textbf{Participant}, Oregon, USA (6 days) \\
-             & \textit{Cascadian Subduction Zone:} Participated in a short course on sedimentary deposits and their relation to past earthquakes. \\
-             & \textit{Cascades:} Observed lava deposits at Newberry Volcano to understand lava flow dynamics and transport. \\\\
-        
-        2022 & \textbf{Participant and Student}, Italy (Various Locations) (15 days) \\
-             & Assisted in sampling fiamme from the Ora Caldera. \\
-             & Observed surface geology of the Ivrea Zone for insights into Earth's crust and upper mantle. \\
-             & Attended a short course at Stromboli, focusing on effusive processes through lava deposit observations. \\\\
-        
-        2022 & \textbf{Student}, Long Valley Caldera, CA, USA (5 days) \\
-             & Studied deposits to understand surface processes, including lava flow, pyroclastic flow, and shallow intrusions.
-    \end{tabularx}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
+Year & \textbf{Role Title}, Location \\
+     & Description of your fieldwork.
+\end{tabularx}
 
 \section*{Teaching and Outreach}
-\subsection*{National Association of Geoscience Teachers}
-% \subheading{National Association of Geoscience Teachers}
+\subsection*{Organization Name}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-2024 & \textbf{Mentor}, Geosciences Education \& Mentorship Support \\
-     & Advised undergraduate students at the University of Tennessee's (Knoxville, TN) Earth Science Department on academic matters.
-\end{tabularx}
-
-\subsection*{Vanderbilt University, Nashville, TN}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-2024 (Spring) & \textbf{Instructor for Physical Geology Lab}, Department of Earth and Environmental Science \\
-              & Delivered hands-on laboratory sessions for an introductory physical geology course. \\
-              & Supervised and assisted students in geological experiments and fieldwork. \\
-              & Fostered an inclusive environment, encouraging student participation and passion for geology. \\\\
-
-2023 \& 2024 (Summer) & \textbf{Instructor for Computational Physics Bootcamp}, Department of Physics and Astronomy \\
-                      & Designed and delivered an introduction to computational physics, imparting practical skills to graduate students. \\\\
-
-2023 (Fall) & \textbf{Tutor for Advanced Physical Chemistry}, Department of Physics and Astronomy \\
-            & Provided tutoring for a graduate-level Physical Chemistry course. Enhanced student performance through effective teaching methodologies. \\\\
-
-2023 - Present & \textbf{Reviewer for Young Scientist Journal}, Center for Science Outreach \\
-               & Provided constructive feedback to authors and collaborated with editors to promote science literacy.
-\end{tabularx}
-
-\subsection*{Fisk University, Nashville, TN}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-2022 - 2024 & \textbf{Peer Mentor}, Department of Life and Physical Science \\
-            & Guided first-year graduate students in the Fisk-Vanderbilt Bridge program on academic matters. \\
-            & Organized group sessions to promote peer interaction and collaboration. \\\\
-
-2024 (Spring) & \textbf{Guest Speaker for Professional Development Seminar} \\
-              & Delivered a lecture on Time and Task Management to graduate students. Conducted interactive Q\&A sessions. \\\\
-
-2024 (Spring) & \textbf{Guest Speaker for Biochemistry and Molecular Biology Course} \\
-              & Presented stress management techniques to undergraduate students.
-\end{tabularx}
-
-\subsection*{California Institute of Technology, Pasadena, CA}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-2016 & \textbf{Volunteer}, Center for Learning and Outreach \\
-     & Designed and presented science projects for K-12 students. Developed science projects for teachers.
+Year & \textbf{Role Title}, Description of your responsibilities.
 \end{tabularx}
 
 \section*{Training and Professional Development}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
-2024 & \textbf{Graduate Employee Day of Teaching}, University of Oregon; Eugene, Oregon, USA \\
-2024 & \textbf{Summer School on Mathematics of Geophysical Flows}, Max Planck Institute for Mathematics in the Sciences; Leipzig, Germany \\
-2024 & \textbf{Classrooms, Careers, \& Communities: Maximizing Your TA Experience}, GSA Southeastern Section Meeting; Asheville, NC, USA \\
-2021 & \textbf{Professional Development Seminar: Academic Mentorship}, Fisk University, Nashville, TN, USA
+Year & \textbf{Event Title}, Event Location.
 \end{tabularx}
 
-\section*{Professional Memberships and Affiliations} %% using list in wrapped line for compactness
- American Physical Society (APS), American Geophysical Union (AGU), Geological Society of America (GSA), Society for the Advancement of Chicanos/Hispanics and Native Americans in Science (SACNAS)
+\section*{Professional Memberships and Affiliations}
+List your memberships here.
 
 \end{document}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%% sample using tabbing environment instead of tabularx
-%%% note: lines do not wrap automatically, so you will need to insert line breaks manually
-% \section*{Field Experience}
-% \begin{tabbing}
-%           \hspace*{2.5cm} \= \hspace*{6cm} \= \kill
-% 2024  \> \textbf{Instructor}, Tennessee, USA (2 days) \\
-%        \> \textit{Richland Creek:} Taught students how to assess a stream site (water quality and flood risk). \\
-%        \> \textit{Fort Negley:} Observed sedimentary rocks and interpreted geological processes, \\
-%        \> \hspace*{1cm} searched for fossils in outcrops.\\\\
-
-%  2023  \>\textbf{Participant},  Oregon, USA (6 days)\\
-%         \>\textit{Cascadian Subduction Zone:} Participated in a short course on sedimentary deposits and their\\ 
-%         \>relation to past earthquakes. \\
-%         \>\textit{Cascades:} Observed lava deposits at Newberry Volcano to understand lava flow dynamics and\\
-%         \> \hspace*{1cm} transport.\\\\
-
-%   2022  \> \textbf{Participant and Student}  Italy (Various Locations) (15 days)\\
-%         \>Assisted in sampling fiamme from the Ora Caldera. \\
-%         \>Observed surface geology of the Ivrea Zone for insights into Earth's crust and upper mantle. \\
-%         \>Attended a short course at Stromboli, focusing on effusive processes through lava deposit\\
-%         \> observations.\\\\
-
-% 2022 \> \textbf{Student}, Long Valley Caldera, CA, USA (5 days)\\
-%      \> Studied deposits to understand surface processes, including lava flow, pyroclastic flow, \\
-%      \> and shallow intrusions.
-% \end{tabbing}
