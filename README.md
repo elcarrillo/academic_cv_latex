@@ -12,7 +12,7 @@ The project uses the `article` document class for enhanced customization and fle
 - **Custom Header and Footer**: Displays the page number and total number of pages (e.g., `1/4`).
 - **Responsive Tables**: Uses `tabularx` to automatically adjust column widths.
 - **Custom Section Titles**: Defines different styles for sections, subsections, and sub-subsections.
-- **Hanging Indents**: Applied to citations for neat alignment.
+- **Hanging Indents**: Applied to publication sections for citation-style formatting and neat alignment.
 - **Icons**: Uses `fontawesome` for social media icons (e.g., email, GitHub).
 - **Line Spacing**: Customized for readability.
 - **Hyperlinks**: URLs are clickable, and internal links are hidden for neat page navigation.
