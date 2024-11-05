@@ -1,5 +1,5 @@
 %% Date Created: March 4, 2022
-%% Last Modified: October 16, 2024
+%% Last Modified: November 5, 2024
 %% Available on GitHub at: https://github.com/elcarrillo/academic_cv_latex
 
 \documentclass[a4paper,10pt]{article}
@@ -23,9 +23,9 @@
 \renewcommand{\familydefault}{\sfdefault} % Set default font to sans-serif
 \definecolor{NavyBlue}{RGB}{0,0,128}      % custom colors
 
-% title formatting for sections
-\titleformat{\section}  
-  {\color{NavyBlue}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}] 
+% Title formatting for sections
+\titleformat{\section} % change heading color here  
+  {\color{NavyBlue}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
 \titleformat{\subsection}  
   {\normalfont\bfseries}{\thesubsection}{1em}{\underline}[]
 \titleformat{\subsubsection}  
@@ -48,11 +48,12 @@
 
 % Custom footer for the first page
 \fancypagestyle{firstpagefooter}{
-    \fancyhf{}  % Clear header and footer on the first page
+    \fancyhf{}               % Clear header and footer on the first page
     \fancyfoot[C]{\thepage}  % Custom center footer text
-    \fancyfoot[R]{\today}  % Custom right footer text
+    \fancyfoot[R]{\today}    % Custom right footer text
 }
-%% to use, insert the following command after title text: \thispagestyle{firstpagefooter} 
+%% to use custom footer, insert the following 
+%% command after title text: \thispagestyle{firstpagefooter} 
 
 % custom hyperlink formatting 
 \hypersetup{
@@ -65,16 +66,36 @@
 
 %% Custom subheading - can be used in place of subsection heading 
 \newcommand{\subheading}[1]{\vspace{0.5cm}\noindent\makebox[\textwidth][l]{\underline{\textbf{#1}}}\par\vspace{0.3cm}} 
-    %makebox controls overfull underlines
+    % "makebox" controls overfull underlines
 
 \raggedbottom %% stops latex from stretching content to fill the page
 
-%% Section General Format:
+% Section General Format
+% ----------------------------------------------------------------------------------------
 % \section*{New Section Title}
 % \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 % Year & \textbf{Role}, Organization, Location \\
 %      & Description of role or project.
 % \end{tabularx}
+% ----------------------------------------------------------------------------------------
+
+%% Listing Publications
+%% --------------------------------------------------------------------------------------------
+%% For publications and conference presentations sections, I make use of a hanging indent 
+%%   to make it easier for the reader to see a break between the displayed works.
+%%   This formatting is common for citations and references. 
+%%   - To get the hanging indent I use \hangitem (initiates hanging indent environment ) along 
+%%     with \hangafter (line to start indentation)
+%% When using multiple line items with \hangitem in the same section, use \noindent to reset indentation for every new item
+%%  Example
+    % \hangindent=1.5em \hangafter=1 
+    % line item for conference abstract  % do not use double slash (\\) for new line, use empty line between items insteead
+    
+    % \hangindent=1.5em \hangafter=1 
+    % \noindent line time for conference abstract
+%% --------------------------------------------------------------------------------------------
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -85,6 +106,7 @@
 
 \maketitle \vspace{-2.0cm} %vspace -# gets rid of space from empty \author and \date
 
+% customized title here 
 \begin{center}
     [Your Title] $\cdot$ [Your Department] $\cdot$ [Your Institution] \\
     
@@ -129,7 +151,7 @@ Year & \textbf{Your Name}, Co-authors, Conference Title. Conference, Location.
 Year & \textbf{Award Title}, Awarding Organization.
 \end{tabularx}
 
-\section*{Research Interests}
+\section*{Research Interests} %% use comma-separated list for compactness (instead of itemized list)
 [Your research interests in list form]
 
 \section*{Research Experience}
@@ -162,6 +184,7 @@ Year & \textbf{Event Title}, Event Location.
 \end{tabularx}
 
 \section*{Professional Memberships and Affiliations}
+%% use a comma-separated list for compactness (instead of itemized list)
 List your memberships here.
 
 \end{document}
