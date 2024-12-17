@@ -1,5 +1,4 @@
 %% Date Created: March 4, 2022
-%% Last Modified: November 5, 2024
 %% Available on GitHub at: https://github.com/elcarrillo/academic_cv_latex
 
 \documentclass[a4paper,10pt]{article}
@@ -52,21 +51,21 @@
     \fancyfoot[C]{\thepage}  % Custom center footer text
     \fancyfoot[R]{\today}    % Custom right footer text
 }
-%% to use custom footer, insert the following 
+%% To use custom footer, insert the following 
 %% command after title text: \thispagestyle{firstpagefooter} 
 
 % custom hyperlink formatting 
 \hypersetup{
-    colorlinks=true,        % Keep links like URLs visible
-    linkcolor=black,        % Link color
-    urlcolor=blue,          % URLs color
-    citecolor=black,        % Citation links colors
+    colorlinks=true,         % Keep links like URLs visible
+    linkcolor=black,         % Link color
+    urlcolor=blue,           % URLs color
+    citecolor=black,         % Citation links colors
     linkbordercolor={1 1 1}, % Hides boxes around links (for page numbers)
     pdfauthor={Your Name},
     pdftitle={Curriculum Vitae},
     pdfsubject={Academic CV},
     pdfkeywords={Your, Keywords},
-    bookmarksopen=true,
+    bookmarksopen=true,      % add pdf bookmarks
     bookmarksnumbered=true,
 }
 
@@ -75,6 +74,11 @@
     % "makebox" controls overfull underlines
 
 \raggedbottom %% stops latex from stretching content to fill the page
+
+
+%% Globally remove all section(and subsections) title numbering
+\setcounter{secnumdepth}{0}
+
 
 % Section General Format
 % ----------------------------------------------------------------------------------------
@@ -124,7 +128,7 @@
 %% use custom footer on the first page
 \thispagestyle{firstpagefooter}
 
-\section*{Education}
+\section{Education}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 [Year Start] - [Year End] & \textbf{Institution Name}, Location \\
                & Degree, Field of Study \\
@@ -132,65 +136,65 @@
                & Advisor: [Advisor Name] \\
 \end{tabularx}
 
-\section*{Publications}
+\section{Publications}
 
-\subsubsection*{In Review} 
+\subsection{In Review} 
 \hangindent=1.5em \hangafter=1
 \textbf{Your Name}, Co-authors, (Year). Paper Title. Journal Name.
 
-\subsubsection*{In Preparation}
+\subsection{In Preparation}
 \hangindent=1.5em \hangafter=1
 \textbf{Your Name}, Co-authors, (Year). Paper Title. Journal Name. 
 
-\section*{Invited Talks}
+\section{Invited Talks}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
 Year & \textbf{Talk Title}, Conference/Organization Name \\
 \end{tabularx}
 
-\section*{Conference Abstracts}
+\section{Conference Abstracts}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
 Year & \textbf{Your Name}, Co-authors, Conference Title. Conference, Location.
 \end{tabularx}
 
-\section*{Honors and Awards}
+\section{Honors and Awards}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
 Year & \textbf{Award Title}, Awarding Organization.
 \end{tabularx}
 
-\section*{Research Interests} %% use comma-separated list for compactness (instead of itemized list)
-[Your research interests in list form]
+\section{Research Interests} %% use comma-separated list for compactness (instead of itemized list)
+    [Your research interests in list form]
 
-\section*{Research Experience}
+\section{Research Experience}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 Year Start - Year End & \textbf{Role Title}, Organization, Location \\
                       & Description of your responsibilities and research projects.
 \end{tabularx}
 
-\section*{Professional Experience}
+\section{Professional Experience}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 Year Start - Year End & \textbf{Role Title}, Organization, Location \\
                       & Description of your professional roles.
 \end{tabularx}
 
-\section*{Field Experience}
+\section{Field Experience}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
 Year & \textbf{Role Title}, Location \\
      & Description of your fieldwork.
 \end{tabularx}
 
-\section*{Teaching and Outreach}
+\section{Teaching and Outreach}
 \subsection*{Organization Name}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 Year & \textbf{Role Title}, Description of your responsibilities.
 \end{tabularx}
 
-\section*{Training and Professional Development}
+\section{Training and Professional Development}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1cm} X}
 Year & \textbf{Event Title}, Event Location.
 \end{tabularx}
 
-\section*{Professional Memberships and Affiliations}
+\section{Professional Memberships and Affiliations}
 %% use a comma-separated list for compactness (instead of itemized list)
-List your memberships here.
+    List your memberships here.
 
 \end{document}

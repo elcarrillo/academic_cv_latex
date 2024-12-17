@@ -70,6 +70,11 @@
 
 \raggedbottom %% Stops LaTeX from stretching content to fill the page
 
+%% globally remove all section(and subsections) title numbering
+\setcounter{secnumdepth}{0}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%  Begin document                                                                              %%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,7 +99,7 @@
 %% Use custom footer on the first page
 \thispagestyle{firstpagefooter}
 
-\section*{Education}
+\section{Education}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 2020 -- Present & \textbf{University of Science}, City, State \\
                 & Ph.D. in Biochemistry \\
@@ -106,10 +111,10 @@
                 & Honors: Magna Cum Laude \\
 \end{tabularx}
 
-\section*{Research Interests}
+\section{Research Interests}
 Enzyme kinetics, protein engineering, metabolic pathway analysis, structural biology, and drug design.
 
-\section*{Research Experience}
+\section{Research Experience}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 2020 -- Present & \textbf{Graduate Research Assistant}, University of Science, Department of Biochemistry \\
                 & \textit{Project Title:} Investigation of enzyme mechanisms in metabolic pathways \\
@@ -120,29 +125,29 @@ Enzyme kinetics, protein engineering, metabolic pathway analysis, structural bio
                 & Responsibilities: Performed organic synthesis of novel compounds, analyzed results using NMR and mass spectrometry, assisted in writing a publication draft. \\
 \end{tabularx}
 
-\section*{Publications}
+\section{Publications}
 
-\subsubsection*{Peer-Reviewed Articles}
+\subsection{Peer-Reviewed Articles}
 \hangindent=1.5em \hangafter=1
 \textbf{Your Last Name, First Initial.}, Co-author, Co-author. (Year). Title of the article. \textit{Journal Name}, \textit{Volume}(Issue), pages. \href{DOI or URL}{DOI or URL}
 
 \hangindent=1.5em \hangafter=1
 \noindent Co-author, \textbf{Your Last Name, First Initial.}, Co-author. (Year). Title of the article. \textit{Journal Name}, \textit{Volume}(Issue), pages. \href{DOI or URL}{DOI or URL}
 
-\subsubsection*{Manuscripts in Preparation}
+\subsection{Manuscripts in Preparation}
 \hangindent=1.5em \hangafter=1
 \textbf{Your Last Name, First Initial.}, Co-author. Title of the manuscript. Intended journal.
 
-\section*{Conference Presentations}
+\section{Conference Presentations}
 \hangindent=1.5em \hangafter=1 
 \textbf{Your Last Name, First Initial.}, Co-author. (Year, Month). Title of the presentation. Poster session presented at the Conference Name, City, State.
 
 \hangindent=1.5em \hangafter=1 
 \noindent Co-author, \textbf{Your Last Name, First Initial.} (Year, Month). Title of the presentation. Oral presentation at the Conference Name, City, State.
 
-\section*{Teaching Experience}
+\section{Teaching Experience}
 
-\subsection*{University of Science, City, State}
+\subsection{University of Science, City, State}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 Fall 2023 & \textbf{Teaching Assistant}, Biochemistry I \\
           & Assisted in teaching undergraduate students fundamental concepts of biochemistry, held weekly office hours, and graded assignments and exams. \\
@@ -151,21 +156,21 @@ Spring 2022 & \textbf{Laboratory Instructor}, Molecular Biology Lab \\
             & Supervised lab sessions, instructed students on lab techniques such as PCR and gel electrophoresis, ensured safety protocols were followed. \\
 \end{tabularx}
 
-\section*{Grants and Fellowships}
+\section{Grants and Fellowships}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.5cm} X}
 2024 & \textbf{Graduate Research Fellowship}, National Science Foundation \\
 2023 & \textbf{Travel Grant}, Biochemical Society \\
 2021 & \textbf{Departmental Scholarship}, University of Science \\
 \end{tabularx}
 
-\section*{Honors and Awards}
+\section{Honors and Awards}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{1.5cm} X}
 2020 & \textbf{Outstanding Undergraduate Researcher Award}, University of Knowledge \\
 2019 & \textbf{Dean's List}, University of Knowledge (2017 -- 2020) \\
 2018 & \textbf{Scholarship}, American Chemical Society \\
 \end{tabularx}
 
-\section*{Laboratory Skills}
+\section{Laboratory Skills}
 \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{5cm} X}
 \textbf{Enzyme Kinetics Assays} & Proficient in designing and conducting enzyme kinetics experiments, including Michaelis-Menten and inhibition assays. \\
 \textbf{Protein Purification and Characterization} & Experienced in chromatography techniques (HPLC, FPLC), SDS-PAGE, and Western blotting for protein analysis. \\
@@ -175,7 +180,7 @@ Spring 2022 & \textbf{Laboratory Instructor}, Molecular Biology Lab \\
 \textbf{Bioinformatics Tools} & Proficient in using BLAST, PyMOL, Chimera, and sequence alignment software for computational analysis. \\
 \end{tabularx}
 
-\section*{Professional Memberships}
+\section{Professional Memberships}
 American Society for Biochemistry and Molecular Biology (ASBMB), Biophysical Society, American Chemical Society (ACS)
 
 \end{document}
@@ -186,7 +191,7 @@ American Society for Biochemistry and Molecular Biology (ASBMB), Biophysical Soc
 
 %% Section General Format:
 %% ------------------------------------
-% \section*{Section Title}
+% \section{Section Title}
 % \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
 % Dates & \textbf{Position Title}, Organization, City, State \\
 %       & Description of role or project.
