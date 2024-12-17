@@ -23,7 +23,8 @@ The project uses the `article` document class for enhanced customization and fle
 
 - `main.tex`: The main LaTeX file that builds the CV.
 - `README.md`: (this file) provides an overview of the project and instructions.
-- `examples/`: sample usage of the template (pdf and tex files)  
+- `examples/`: sample usage of the template (pdf and tex files)
+- 'bib.bib': bibtex file (used for alternate formatting with biblatex)  
 ---
 
 ## Required Packages

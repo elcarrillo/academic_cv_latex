@@ -16,6 +16,10 @@
 \usepackage{helvet}               % Sans-serif font (Helvetica)
 \usepackage{datetime}             % Custom date/time
 
+% \usepackage[backend=biber,style=authoryear,maxbibnames=10]{biblatex} % bibtex
+% \addbibresource{bib.bib}
+
+
 % redefine \today to show only month and year
 \renewcommand{\today}{\monthname[\the\month] \the\year}
 
@@ -78,32 +82,6 @@
 
 %% Globally remove all section(and subsections) title numbering
 \setcounter{secnumdepth}{0}
-
-
-% Section General Format
-% ----------------------------------------------------------------------------------------
-% \section*{New Section Title}
-% \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
-% Year & \textbf{Role}, Organization, Location \\
-%      & Description of role or project.
-% \end{tabularx}
-% ----------------------------------------------------------------------------------------
-
-%% Listing Publications
-%% --------------------------------------------------------------------------------------------
-%% For publications and conference presentations sections, I make use of a hanging indent 
-%%   to make it easier for the reader to see a break between the displayed works.
-%%   This formatting is common for citations and references. 
-%%   - To get the hanging indent I use \hangitem (initiates hanging indent environment ) along 
-%%     with \hangafter (line to start indentation)
-%% When using multiple line items with \hangitem in the same section, use \noindent to reset indentation for every new item
-%%  Example
-    % \hangindent=1.5em \hangafter=1 
-    % line item for conference abstract  % do not use double slash (\\) for new line, use empty line between items insteead
-    
-    % \hangindent=1.5em \hangafter=1 
-    % \noindent line time for conference abstract
-%% --------------------------------------------------------------------------------------------
 
 
 
@@ -198,3 +176,94 @@ Year & \textbf{Event Title}, Event Location.
     List your memberships here.
 
 \end{document}
+
+
+
+%% =============================== GENERAL FORMATS ===============================
+
+%% SECTION TEMPLATE
+%% ------------------------------------
+% \section*{Section Title}
+% \begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{2.5cm} X}
+%   Year & \textbf{Role}, Organization, Location \\
+%        & Description of role or project.
+% \end{tabularx}
+%% ------------------------------------
+
+%% HANGING INDENTS FOR PUBLICATIONS OR ABSTRACTS
+%% --------------------------------------------------------------------------------------------
+%% Use a hanging indent to improve readability of references and abstract listings:
+%%
+%% Example:
+% \hangindent=1.5em \hangafter=1
+% First line of reference or abstract entry.
+%
+% \hangindent=1.5em \hangafter=1
+% \noindent Next reference or abstract entry.
+%%
+%% Note: Use empty lines (not \\) for new lines between items.
+
+%% ============================= USING BIBLATEX =============================
+%% BibLaTeX is ideal for managing long lists of publications, abstracts, etc.
+
+%% STEPS TO USE BIBLATEX:
+%% (1) Add entries to a .bib file.
+%% (2) In your preamble:
+%    \usepackage[backend=biber,style=authoryear,maxbibnames=10]{biblatex}
+%    \addbibresource{bib.bib}
+%%
+%% (3) Decide how to display items:
+
+%% CASE A: ALL ITEMS IN ONE LIST
+% \nocite{conferece2024,publication2023}  % Add specific keys or use \nocite{*} for all
+% \printbibliography[heading=none]
+
+%% CASE B: SEPARATE BY KEYWORDS
+% Use keywords in your .bib entries (e.g., keyword={inreview}).
+% \nocite{Carrillo2024_inreview,Ruefer2024_inprep}
+% \printbibliography[heading=none,keyword=inreview]
+
+%% (4) CUSTOMIZATION:
+% - Add subheadings:
+%   \printbibliography[heading=subbibliography,title={In Review},keyword=inreview]
+%
+% - Include all .bib items without citing individually:
+%   \nocite{*} (do this early in the document, before \printbibliography)
+
+%% EXAMPLE FOR CONFERENCE ABSTRACTS:
+% \section{Conference Abstracts}
+% \nocite{2024_conference}
+% \printbibliography[heading=none,keyword=conference]
+
+%% ANOTHER EXAMPLE USING MULTIPLE CATEGORIES:
+% \nocite{*}
+% \section{Publications}
+% \printbibliography[heading=subbibliography,title={In Review},keyword=inreview]
+% \printbibliography[heading=subbibliography,title={In Prep},keyword=inprep]
+%
+% \section{Conference Abstracts}
+% \printbibliography[heading=none,keyword=conference]
+
+%% HIGHLIGHTING YOUR NAME:
+%% To make your name appear in bold, edit the .bib entry:
+% @article{2024_inreview,
+%   author  = {{\textbf{LastName, FirstName}} and Author, A.B. and Author, Third},
+%   title   = {Your Article Title},
+%   year    = {2024},
+%   keywords= {inreview},
+%   journal = {Journal_Title}
+% }
+%% Double braces around {\textbf{...}} ensure BibLaTeX treats it as literal text, preserving formatting.
+
+%% ========================== OTHER FORMATTING EXAMPLES ==========================
+
+
+%% MISC COMMANDS:
+%% \addcontentsline{toc}{section}{SECTION_TITLE}  
+%%   - Manually adds an entry to the TOC (does not print in the document), useful for navigation or screen readers.
+
+%% \pdfbookmark[2]{SECTION_TITLE}{SECTION_TITLELabel}
+%%   - Adds a PDF bookmark for navigation without affecting TOC entries. Useful if skipping heading levels.
+
+
+%% END OF GUIDELINES
