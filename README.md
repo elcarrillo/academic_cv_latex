@@ -42,8 +42,7 @@ Here’s a brief explanation of the LaTeX packages used in this template:
 - `tabularx`: Creates tables with auto-sizing columns.
 - `hanging`: Enables hanging indents for citation formatting.
 - `helvet`: Uses Helvetica font for a modern sans-serif look.
-- `lastpage`: Allows referencing the last page for page counts.
-
+  
 ---
 
 ## Usage Instructions
