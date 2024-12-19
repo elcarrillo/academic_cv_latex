@@ -1,0 +1,82 @@
+\documentclass[a4paper,10pt]{article}
+% Package imports for layout, fonts, icons, colors, etc.
+\usepackage[margin=2cm]{geometry} % Page layout
+\usepackage{titlesec}             % Custom section titles
+\usepackage{setspace}             % Line spacing
+\usepackage{enumitem}             % Custom list formats
+\usepackage{xcolor}               % Custom colors
+\usepackage{fancyhdr}             % Custom headers/footers
+\usepackage{hyperref}             % Clickable URLs and links
+\usepackage{fontawesome}          % Social media icons (GitHub, email)
+\usepackage{tabularx}             % Responsive tables
+\usepackage{hanging}              % Hanging indents for citations
+\usepackage{helvet}               % Sans-serif font (Helvetica)
+\usepackage{datetime}             % Custom date/time
+
+% \usepackage[backend=biber,style=authoryear,maxbibnames=10]{biblatex} % bibtex
+% \addbibresource{bib.bib}
+
+
+% redefine \today to show only month and year
+\renewcommand{\today}{\monthname[\the\month] \the\year}
+
+\renewcommand{\familydefault}{\sfdefault} % Set default font to sans-serif
+\definecolor{NavyBlue}{RGB}{0,0,128}      % custom colors
+
+% Title formatting for sections
+\titleformat{\section} % change heading color here  
+  {\color{NavyBlue}\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+\titleformat{\subsection}  
+  {\normalfont\bfseries}{\thesubsection}{1em}{\underline}[]
+\titleformat{\subsubsection}  
+  {\normalfont\bfseries\itshape}{\thesubsubsection}{1em}{}[{}]
+
+\titlespacing*{\subsubsection}{0pt}{0ex}{0ex}
+
+% line spacing
+\setstretch{1.2}
+
+% Footer
+\pagestyle{fancy}  % Set the general footer for all pages
+\fancyhf{}         % Clear all header and footer fields
+
+%% Define footer for all pages 
+\renewcommand{\headrulewidth}{0pt}  % Remove the line at the top
+\fancyfoot[L]{[Your Name]}    % Left-aligned name, CHANGE NAME HERE
+\fancyfoot[C]{\thepage}       % Center-aligned page number
+\fancyfoot[R]{\today}         % Right-aligned date
+
+% Custom footer for the first page
+\fancypagestyle{firstpagefooter}{
+    \fancyhf{}               % Clear header and footer on the first page
+    \fancyfoot[C]{\thepage}  % Custom center footer text
+    \fancyfoot[R]{\today}    % Custom right footer text
+}
+%% To use custom footer, insert the following 
+%% command after title text: \thispagestyle{firstpagefooter} 
+
+% custom hyperlink formatting 
+\hypersetup{
+    colorlinks=true,         % Keep links like URLs visible
+    linkcolor=black,         % Link color
+    urlcolor=blue,           % URLs color
+    citecolor=black,         % Citation links colors
+    linkbordercolor={1 1 1}, % Hides boxes around links (for page numbers)
+    pdfauthor={Your Name},
+    pdftitle={Curriculum Vitae},
+    pdfsubject={Academic CV},
+    pdfkeywords={Your, Keywords},
+    bookmarksopen=true,      % add pdf bookmarks
+    bookmarksnumbered=true,
+}
+
+%% Custom subheading - can be used in place of subsection heading 
+\newcommand{\subheading}[1]{\vspace{0.5cm}\noindent\makebox[\textwidth][l]{\underline{\textbf{#1}}}\par\vspace{0.3cm}} 
+    % "makebox" controls overfull underlines
+
+\raggedbottom %% stops latex from stretching content to fill the page
+
+
+%% Globally remove all section(and subsections) title numbering
+\setcounter{secnumdepth}{0}
+
